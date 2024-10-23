@@ -1,0 +1,33 @@
+implementing node js setup
+1.Go to Node.js official website.
+2.node -v
+  npm -v
+3.mkdir my-node-app
+4.cd my-node-app
+5.npm init
+6.npm init -y
+7.npm install express
+8.npm install -g nodemon
+9.Create a Simple Node.js Application create app.js
+10.touch app.js
+11.javascript code
+   const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+12.node app.js
+13.Test the Application:
+
+Open your web browser and go to http://127.0.0.1:3000.
+You should see the message "Hello, World!".
